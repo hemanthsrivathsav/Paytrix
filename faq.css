@@ -1,0 +1,296 @@
+
+body{
+	background: linear-gradient(
+    45deg,
+    hsla(300, 47%, 75%, 0.356),
+    rgba(0, 102, 255, 0.301) );
+} ; // not useable
+  position: ;
+}
+#nav{
+}
+#nav-toggle{
+	position : relative;
+	cursor: pointer;
+ /* background:
+  linear-gradient(red, transparent),
+  linear-gradient(to top right, blue, transparent);
+  */
+  background : white ;
+	background:linear-gradient(
+    45deg,
+    hsla(300, 47%, 75%, 0.356),
+    rgba(0, 102, 255, 0.301) );
+ /*// color for background of nav bar*/
+	padding: 27px  50px 30px 7px;
+	border: 0px solid ;/* //soild not useable*/
+	border-radius: 100%;
+	display: ;
+}
+#nav-toggle span , #nav-toggle span:before , #nav-toggle span:after{
+	position: absolute;
+	content: '';
+	display: block;
+	background: linear-gradient(45deg, rgba(28,134,173,1) 20%, rgba(42,154,159,1) 34%, rgba(241,178,17,1) 50%, rgba(232,54,17,1) 83%, rgba(249,0,47,1) 96%); /* color for 3 lines in*/
+	width: 40px;
+	height: 5px;
+	border-radius: 5px;
+	transition: all 500ms ease;
+}
+#nav-toggle span:before{
+                           /* this is for the 3 lines in the 
+                           nav bar 
+                           #nav-toggle span:after{
+                                      	bottom: -500px;
+                                                }
+                                                  */
+top: 10px;
+}
+#nav-toggle span:after{
+  top:-10px;
+}
+#nav-toggle.active span:before{
+  top: -0px;
+}
+#nav-toggle.active span:before{
+  top: -0px;
+}
+#nav-toggle.active span:after {
+  top: -0px;
+  
+}
+#nav-toggle.active span{
+	background: transparent;
+}
+#nav-toggle.active span:before{
+	transform: rotate(320deg);
+}
+#nav-toggle.active span:after{
+	transform: rotate(-320deg);
+}
+ul#navbar{
+	list-style-type: none;
+}
+ul#navbar li{
+	display: inline-block;
+	font-size: 1.5em;
+}
+ul#navbar li a{
+	text-decoration: none;
+	display: block;
+	padding: 9px;
+	color:black; /*color for text*/
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	background: linear-gradient(45deg, rgba(28,134,173,1) 20%, rgba(42,154,159,1) 34%, rgba(241,178,17,1) 50%, rgba(232,54,17,1) 83%, rgba(249,0,47,1) 96%);  /*color of home , about boxex in animation*/
+	transition: all 0.5s ease;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+ul#navbar li a:hover{
+	color: black;
+	background: white;
+}
+@media (max-width: 480px){
+	#nav-toggle.active{
+		position: absolute;
+		animation:rise 0.3s ease-in-out;
+		top: 11%;
+	}
+	#nav-toggle{
+		top: 40%;
+		left: 43%;
+		animation:drop 1s ease-in-out;
+		display: block;
+	}
+	#nav{
+		display: none;
+	}
+	ul#navbar{
+		margin-top: 125px;
+		padding-left: 0;
+	}
+	ul#navbar li{
+		display: block;
+	}
+	ul#navbar li a{
+		text-align: center;
+	}
+
+}
+@media (min-width: 481px) and (max-width: 767px){
+	#nav-toggle.active{
+		position: absolute;
+		animation:rise 0.3s ease-in-out;
+		top: 11%;
+	}
+	#nav-toggle{
+		animation:drop 1s ease-in-out;
+		top: 40%;
+		left: 40%;
+		display: block;
+	}
+	#nav{
+		display: none;
+	}
+	ul#navbar{
+		margin-top: 125px;
+		padding-left: 0;
+	}
+	ul#navbar li{
+		display: block;
+	}
+	ul#navbar li a{
+		text-align: center;
+	}
+
+}
+@media (min-width: 768px) and (max-width: 992px){
+	#nav-toggle{
+		left: 0;
+		display: block;
+		border-radius: 0;
+	}
+	#nav{
+		display: none;
+	}
+	ul#navbar{
+		margin-left: 16px;
+		animation: slide 0.3s ease;
+	}
+	ul#navbar li{
+		margin-top: 10px;
+	}
+}
+@media (min-width: 992px){
+	#nav-toggle{
+		left: 0;
+		display: block;
+		border-radius: 0;
+	}
+	#nav{
+		display: none;
+	}	
+	ul#navbar{
+		margin-left: 420px;
+		animation: slide 0.5s ease;
+	}
+	ul#navbar li{
+		margin-top: 10px;
+	}
+}
+
+@keyframes drop{
+	from{
+		top: 10%;
+	}
+	to{
+		top: 40%;
+	}
+}
+@keyframes rise{
+	from{
+		top: 40%;
+	}
+	to{
+		top: 11%;
+	}
+}
+@keyframes slide{
+	from{
+		margin-left:  0px;
+	}
+	to{
+		margin-left: 420px;
+	}
+}
+
+
+
+
+/*faq*/
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body {
+  color: #333;
+  background:linear-gradient(
+    45deg,
+    hsla(300, 47%, 75%, 0.356),
+    rgba(0, 102, 255, 0.301) );
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+
+.faq-header{
+  font-size: 42px;
+  border-bottom: 1px dotted #ccc;
+  padding: 24px;
+}
+
+.faq-content {
+  margin: 0 auto;
+}
+
+.faq-question {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.panel-title {
+  font-size: 24px;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 0 48px;
+  display: block;
+  cursor: pointer;
+}
+
+.panel-content {
+  font-size: 20px;
+  padding: 0px 14px;
+  margin: 0 40px;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .4s ease;
+  -moz-transition: .4s ease;
+  -o-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.panel:checked ~ .panel-content{
+  height: auto;
+  opacity: 1;
+  padding: 14px;
+}
+
+.plus {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 4px;
+  z-index: 5;
+  font-size: 42px;
+  line-height: 100%;
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.panel:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.panel {
+  display: none;
+}
